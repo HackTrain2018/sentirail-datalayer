@@ -1,6 +1,10 @@
 {
   "name": "sentirail-datalayer",
   "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npx tsc",
+    "start": "node src/index.js"
+  },
   "engines": {
     "node": "^10.8.0"
   },
@@ -12,9 +16,8 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "sentiment": "^5.0.1",
-    "twitter": "^1.7.1"
-  },
-  "devDependencies": {
+    "twitter": "^1.7.1",
     "typescript": "^3.1.6"
-  }
+  },
+  "devDependencies": {}
 }
