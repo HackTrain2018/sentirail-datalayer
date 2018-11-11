@@ -92,7 +92,8 @@ async function getTweetSentiment(tweet: Tweet) {
 
 async function handleIncomingTweet(tweet: Tweet) {
   const keywords = await getTweetKeywords(tweet);
-  const response = await getTweetSentiment(tweet) < 0
+  const sentiment = await getTweetSentiment(tweet);
+  const response = sentiment < 0.2
     ? getMatchingResponse(keywords)
     : "Thank you! We're glad that you enjoy traveling with Eurostar!";
 
